@@ -33,6 +33,7 @@
         <module>ssp-rest</module>
         <module>ssp-ng</module>
         <module>ssp-security</module>
+        <module>ssp-vuejs</module>
     </modules>
 
     <properties>
