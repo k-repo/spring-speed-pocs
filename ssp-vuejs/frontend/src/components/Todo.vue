@@ -1,12 +1,12 @@
 <template>
-  <div class="loop">
+  <div class="todo">
     <input v-model="newTodo.text">
     <button v-on:click="addNewTodo">add todo</button>
-    <ol>
-      <li v-for="todo in items">
-        <div>{{ todo.text }}</div>
-      </li>
-    </ol>
+        <transition-group name="list" tag="p">
+      <div v-for="item in items" v-bind:key="item" class="list-item">
+        <div>{{ item.text }}</div>
+      </div>
+        </transition-group>
   </div>
 </template>
 
@@ -14,7 +14,7 @@
   import $ from 'jquery'
   const apiURL = 'http://localhost:8080/api/todo'
   export default {
-    name: 'loop',
+    name: 'todo',
     data () {
       return {
         items: [],
@@ -30,7 +30,6 @@
       fetchData: function () {
 //        var self = this
         $.get(apiURL, function (data) {
-          console.log('hahahaha')
           console.log(data)
 //          self.items = data
         })
@@ -53,5 +52,15 @@
 </script>
 
 <style>
-
+    .list-item {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .list-enter-active, .list-leave-active {
+        transition: all 1s;
+    }
+    .list-enter, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 </style>

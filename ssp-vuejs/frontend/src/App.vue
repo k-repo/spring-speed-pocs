@@ -1,25 +1,21 @@
 <template>
   <div id="app">
-    <hello></hello>
-    <vmodel></vmodel>
-    <hr>
-    <loop></loop>
-    <!--<img src="./assets/logo.png">-->
-
+    <a href="/">Home</a>
+    <a href="/todo">Todo</a>
+    <a href="/model">Model</a>
+    <br>
+    <img src="./assets/logo.png">
+    <route></route>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-import Loop from './components/Loop'
-import Vmodel from './components/Vmodel'
+import Route from './Route'
 
 export default {
   name: 'app',
   components: {
-    Hello,
-    Loop,
-    Vmodel
+    Route
   }
 }
 </script>
