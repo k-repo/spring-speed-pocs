@@ -2,8 +2,9 @@
   <div id="app">
     <hello></hello>
     <vmodel></vmodel>
+    <hr>
     <loop></loop>
-    <img src="./assets/logo.png">
+    <!--<img src="./assets/logo.png">-->
 
   </div>
 </template>

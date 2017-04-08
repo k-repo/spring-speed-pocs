@@ -4,7 +4,7 @@
     <button v-on:click="addNewTodo">add todo</button>
     <ol>
       <li v-for="todo in items">
-        {{ todo.text }}
+        <div>{{ todo.text }}</div>
       </li>
     </ol>
   </div>
@@ -28,18 +28,23 @@
     },
     methods: {
       fetchData: function () {
-        var self = this
+//        var self = this
         $.get(apiURL, function (data) {
           console.log('hahahaha')
           console.log(data)
-          self.items = data
+//          self.items = data
         })
       },
       addNewTodo: function () {
         var self = this
         var item = self.newTodo
         console.log(item)
-        self.items.push(item)
+        if (item.text) {
+          self.items.push({
+            text: item.text
+          })
+        }
+
         self.newTodo.text = 'new again ...'
       }
     }
