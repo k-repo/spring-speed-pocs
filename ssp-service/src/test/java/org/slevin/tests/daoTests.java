@@ -28,14 +28,14 @@ public class DaoTests {
         List<Account> accounts = accountService.findAll();
         assertEquals(1, accounts.size());
         assertTrue(accounts.get(0).isEnabled());
-        assertEquals("kamal.azaddyne@gmail.com", accounts.get(0).getEmail());
+        assertEquals("az@gmail.com", accounts.get(0).getEmail());
     }
 
 
     private static void MockTheDao() throws Exception {
         accountService = mock(AccountDao.class);
         Account account = new Account();
-        account.setEmail("kamal.azaddyne@gmail.com");
+        account.setEmail("az@gmail.com");
         account.setPassword("");
         account.setEnabled(true);
         ArrayList<Account> accountList = new ArrayList<Account>();
