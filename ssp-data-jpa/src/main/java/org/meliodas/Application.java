@@ -28,7 +28,7 @@ public class Application implements CommandLineRunner {
 
         customerRepository.save(new Customer("test1", "test", "test1@springboot.com"));
         customerRepository.save(new Customer("test2", "test2", "test2@springboot.com"));
-        customerRepository.save(new Customer("kamal", "azaddyne", "kamal.azaddyne@springboot.com"));
+        customerRepository.save(new Customer("test3", "test3", "test3@springboot.com"));
 
 
         // fetch all customers

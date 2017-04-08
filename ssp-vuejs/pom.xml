@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>online.derb</groupId>
-    <artifactId>app</artifactId>
+    <artifactId>ssp-vuejs</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
