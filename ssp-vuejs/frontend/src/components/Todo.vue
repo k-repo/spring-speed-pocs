@@ -2,11 +2,15 @@
   <div class="todo">
     <input v-model="newTodo.text">
     <button v-on:click="addNewTodo">add todo</button>
-        <transition-group name="list" tag="p">
-      <div v-for="item in items" v-bind:key="item" class="list-item">
-        <div>{{ item.text }}</div>
-      </div>
-        </transition-group>
+     <transition-group name="list" tag="p">
+      <ol v-for="(item, index) in items" v-bind:key="item"
+           class="list-item">
+        <li>
+          {{ item.text }}
+        <button v-on:click="removeItem(index)">X</button>
+        </li>
+      </ol>
+     </transition-group>
   </div>
 </template>
 
@@ -30,21 +34,23 @@
       fetchData: function () {
 //        var self = this
         $.get(apiURL, function (data) {
-          console.log(data)
+//          console.log(data)
 //          self.items = data
         })
       },
       addNewTodo: function () {
         var self = this
         var item = self.newTodo
-        console.log(item)
         if (item.text) {
           self.items.push({
             text: item.text
           })
         }
-
         self.newTodo.text = 'new again ...'
+      },
+      removeItem: function (index) {
+        var self = this
+        self.items.splice(index, 1)
       }
     }
 
