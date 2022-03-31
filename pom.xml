@@ -37,7 +37,7 @@
     </modules>
 
     <properties>
-        <spring.framework.version>4.2.1.RELEASE</spring.framework.version>
+        <spring.framework.version>5.3.18</spring.framework.version>
         <!--<spring.security.version>4.0.1.RELEASE</spring.security.version>-->
 
         <!--Prime faces and spring security taglib are not compatible with the last version of spring security-->
