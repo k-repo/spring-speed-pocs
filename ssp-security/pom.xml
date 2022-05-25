@@ -9,7 +9,7 @@
 
 	<properties>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
-		<spring.framework.version>4.0.3.RELEASE</spring.framework.version>
+		<spring.framework.version>5.2.22.RELEASE</spring.framework.version>
 		<spring.security.version>3.2.5.RELEASE</spring.security.version>
 	</properties>
 
