@@ -42,7 +42,7 @@
 
         <!--Prime faces and spring security taglib are not compatible with the last version of spring security-->
         <!--Waiting for the fix :)-->
-        <spring.security.version>3.2.7.RELEASE</spring.security.version>
+        <spring.security.version>5.5.7</spring.security.version>
 
         <spring.security.taglib.version>3.2.7.RELEASE</spring.security.taglib.version>
         <spring.data.version>1.8.0.RELEASE</spring.data.version>
