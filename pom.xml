@@ -45,7 +45,7 @@
         <spring.security.version>3.2.7.RELEASE</spring.security.version>
 
         <spring.security.taglib.version>3.2.7.RELEASE</spring.security.taglib.version>
-        <spring.data.version>1.8.0.RELEASE</spring.data.version>
+        <spring.data.version>3.3.5</spring.data.version>
         <spring.batch.version>3.0.4.RELEASE</spring.batch.version>
         <junit.version>4.12</junit.version>
         <lombok.version>1.16.4</lombok.version>
